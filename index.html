@@ -16,29 +16,45 @@
     <div class="cards">
 
       <div class="card front">
-        <img src="images/bg-card-front.png" alt="">
+        <span id="cardnumber">1234 5678 9123</span>
+        <div>
+          <span>Jane Appleseed</span>
+          <span>09/02</span>
+        </div>
+
       </div>
-      <div class="card back">
-        <img src="images/bg-card-back.png" alt="">
+      <div class="card back" back>
+        <span>000</span>
       </div>
 
     </div>
 
-    <div class="form">
+    <div class="forms">
       <form action="" method="get">
-        <div>
-          <label for="">Cardholder Name</label>
+        <div class="input-control">
+          <label for="">CARDHOLDER NAME</label>
           <input placeholder="e.g. Jane Appleseed" type="text">
+          
         </div>
-        
-        <div>
-          <label for="">Card Number</label>
-          <input placeholder="e.g. 1234 5678 9123 0000" type="text">
+        <br>
+        <div class="input-control">
+          <label for="">CARD NUMBER</label>
+          <input placeholder="e.g. 1234 5678 9123 0000" type="number">
+          <span class="error">Wrong format, numbers only</span>
         </div>
 
-        <div>
-          <label for="">EXP. DATE (MM/YY)</label>
-          <input placeholder="MM" type="text"><input placeholder="YY" type="text"><input placeholder="e.g 123" type="text">
+        <div class="input-control">
+          <div class="labels">
+            <label for="">EXP. DATE (MM/YY)</label>
+            <label for="">CVC</label>
+          </div>
+          
+          <div class="inputs">
+            <input placeholder="MM" type="text">
+            <input placeholder="YY" type="text">
+            <input placeholder="e.g 123" type="text">
+          </div>
+          <span class="error">Can't be blank</span>
         </div>
 
         <button>CONFIRM</button>
