@@ -44,9 +44,14 @@ section .cards .card.front {
   flex-direction: column;
   margin-bottom: 30px;
 }
+section .cards .card.front img {
+  height: 90px;
+  width: 90px;
+  padding: 15px 0 0 15px;
+}
 section .cards .card.front #cardnumber {
   text-align: center;
-  margin-top: 120px;
+  margin-top: 90px;
   color: white;
 }
 section .cards .card.front div {
@@ -86,6 +91,7 @@ section .forms {
   height: 350px;
   padding: 10px;
   margin: 25px 100px 50px 0px;
+  display: none;
 }
 section .forms .input-control {
   display: flex;
@@ -126,4 +132,29 @@ section .forms button {
   background-color: hsl(278deg, 68%, 11%);
   border: none;
   border-radius: 4px;
+}
+section .confirmedState {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+}
+section .confirmedState img {
+  height: 50px;
+  width: 50px;
+  margin-bottom: 25px;
+}
+section .confirmedState h5 {
+  margin: 25px 0;
+}
+section .confirmedState button {
+  padding: 15px;
+  font-size: 16px;
+  width: 300px;
+  color: white;
+  background-color: hsl(278deg, 68%, 11%);
+  border: none;
+  border-radius: 4px;
+  margin-top: 15px;
 }/*# sourceMappingURL=style.css.map */
