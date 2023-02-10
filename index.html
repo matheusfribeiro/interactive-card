@@ -16,15 +16,17 @@
     <div class="cards">
 
       <div class="card front">
-        <span id="cardnumber">1234 5678 9123</span>
+        <h2 id="cardnumber">1234 5678 9123</h2>
         <div>
-          <span>Jane Appleseed</span>
-          <span>09/02</span>
+          <span id="cardholder">Jane Appleseed</span>
+          <div>
+            <span id="cardmonth">09</span>/<span id="cardyear">02</span>
+          </div>
         </div>
 
       </div>
       <div class="card back" back>
-        <span>000</span>
+        <span id="cardcvc">000</span>
       </div>
 
     </div>
@@ -33,13 +35,13 @@
       <form action="" method="get">
         <div class="input-control">
           <label for="">CARDHOLDER NAME</label>
-          <input placeholder="e.g. Jane Appleseed" type="text">
+          <input id="cardholderinput" placeholder="e.g. Jane Appleseed" type="text">
           
         </div>
         <br>
         <div class="input-control">
           <label for="">CARD NUMBER</label>
-          <input placeholder="e.g. 1234 5678 9123 0000" type="number">
+          <input maxlength="16" id="cardnumberinput" placeholder="e.g. 1234 5678 9123 0000" >
           <span class="error">Wrong format, numbers only</span>
         </div>
 
@@ -50,9 +52,9 @@
           </div>
           
           <div class="inputs">
-            <input placeholder="MM" type="text">
-            <input placeholder="YY" type="text">
-            <input placeholder="e.g 123" type="text">
+            <input maxlength="2" id="cardmonthinput" placeholder="MM" >
+            <input maxlength="2" id="cardyearinput" placeholder="YY" >
+            <input maxlength="3" id="cardcvcinput" placeholder="e.g 123" >
           </div>
           <span class="error">Can't be blank</span>
         </div>
@@ -67,6 +69,6 @@
   </section>
   
   
-  
+  <script src="script.js"></script>
 </body>
 </html>

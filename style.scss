@@ -42,25 +42,38 @@ section {
     .card {
 
       &.front {
-        height: 250px;
+        height: 220px;
         width: 400px;
         background-image: url('images/bg-card-front.png');
         background-size: contain;
         background-repeat: no-repeat;
         display: flex;
         flex-direction: column;
+        margin-bottom: 30px;
+        
         
 
         #cardnumber {
-          color: red;
+          text-align: center;
+          margin-top: 120px;
+          color: white;
+          
+          
           
         }
 
         div {
-          margin-top: 150px;
+          margin: auto 0 10px 0;
           color: white;
           display: flex;
           justify-content: space-between;
+
+          div {
+            margin-right: 40px;
+            span{
+              padding: 0;
+            }
+          }
 
           span {
             padding: 0px 30px;
@@ -71,7 +84,7 @@ section {
       }
 
       &.back {
-        height: 250px;
+        height: 220px;
         width: 400px;
         background-image: url('images/bg-card-back.png');
         background-size: contain;
@@ -96,7 +109,7 @@ section {
     width: 350px;
     height: 350px;
     padding: 10px;
-    margin: 50px 100px 50px 0px;
+    margin: 25px 100px 50px 0px;
 
     .input-control {
       display: flex;
