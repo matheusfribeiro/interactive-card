@@ -10,6 +10,8 @@ let cardmonthInput = document.querySelector('#cardmonthinput')
 let cardyearInput = document.querySelector('#cardyearinput')
 let cardcvcInput = document.querySelector('#cardcvcinput')
 
+let form = document.querySelector('#cardForm')
+
 
 
 
@@ -41,4 +43,18 @@ cardcvcInput.addEventListener('input', cvcFunc)
 function cvcFunc () {
 
   cardcvc.innerHTML = cardcvcInput.value
+}
+
+
+//FORM SUBMIT
+cardForm.addEventListener('submit', submitForm)
+function submitForm (e) {
+  e.preventDefault()
+  let numberValue = cardnumberInput.value
+
+  if (numberValue.length !== 8) {
+    throw console.error();
+  }
+
+
 }
