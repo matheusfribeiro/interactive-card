@@ -47,14 +47,75 @@ function cvcFunc () {
 
 
 //FORM SUBMIT
-cardForm.addEventListener('submit', submitForm)
+form.addEventListener('submit', submitForm)
 function submitForm (e) {
   e.preventDefault()
-  let numberValue = cardnumberInput.value
 
-  if (numberValue.length !== 8) {
-    throw console.error();
+  let hasError = false
+
+  let inputName = document.forms['cardForm']['cardholderName']
+  let inputNumber = document.forms['cardForm']['cardNumber']
+  let inputMonth = document.forms['cardForm']['cardmonth']
+  let inputYear = document.forms['cardForm']['cardyear']
+  let inputCvc = document.forms['cardForm']['cardcvc']
+
+
+  if (!inputName.value) {
+    hasError = true
+    inputName.classList.add('inputError')
+    let span = inputName.nextSibling.nextSibling
+    span.style.opacity = "100"; 
+  } else {
+    inputName.classList.remove('inputError')
+    let span = inputName.nextSibling.nextSibling
+    span.style.opacity = "0";
   }
 
+  if (!inputNumber.value ) {
+    hasError = true
+    inputNumber.classList.add('inputError')
+    let span = inputNumber.nextSibling.nextSibling
+    span.style.opacity = "100";
+  } else {
+    inputNumber.classList.remove('inputError')
+    let span = inputNumber.nextSibling.nextSibling
+    span.style.opacity = "0";
+  }
 
+  if (!inputMonth.value) {
+    hasError = true
+    inputMonth.classList.add('inputError')
+    
+  } else {
+    inputMonth.classList.remove('inputError')
+  }
+
+  if (!inputYear.value) {
+    hasError = true
+    inputYear.classList.add('inputError')
+    
+  } else {
+    inputYear.classList.remove('inputError')
+  }
+
+  if (!inputCvc.value) {
+    hasError = true
+    inputCvc.classList.add('inputError')
+    
+  } else {
+    inputCvc.classList.remove('inputError')
+  }
+
+  if (!hasError) {
+    let hideDiv = document.querySelector('.forms')
+    let confirmedState = document.querySelector('.confirmedState')
+    hideDiv.style.display = 'none'
+    confirmedState.style.display = 'flex'
+  }
+
+  let continueButton = document.querySelector('#continueButton')
+  continueButton.addEventListener('click', () => {
+    form.submit()
+  })
+    
 }

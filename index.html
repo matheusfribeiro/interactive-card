@@ -33,17 +33,18 @@
     </div>
 
     <div class="forms">
-      <form id="cardForm" action="" method="get">
+      <form id="cardForm" action="" method="put">
         <div class="input-control">
           <label for="">CARDHOLDER NAME</label>
-          <input id="cardholderinput" placeholder="e.g. Jane Appleseed" type="text">
+          <input name="cardholderName" id="cardholderinput" placeholder="e.g. Jane Appleseed" type="text">
+          <span class="error">Can't be blank</span>
           
         </div>
-        <br>
+        
         <div class="input-control">
           <label for="">CARD NUMBER</label>
-          <input maxlength="16" id="cardnumberinput" placeholder="e.g. 1234 5678 9123 0000" >
-          <span class="error">Wrong format, numbers only</span>
+          <input name="cardNumber" maxlength="16" id="cardnumberinput" placeholder="e.g. 1234 5678 9123 0000" >
+          <span class="error">Can't be blank</span>
         </div>
 
         <div class="input-control">
@@ -53,9 +54,9 @@
           </div>
           
           <div class="inputs">
-            <input maxlength="2" id="cardmonthinput" placeholder="MM" >
-            <input maxlength="2" id="cardyearinput" placeholder="YY" >
-            <input maxlength="3" id="cardcvcinput" placeholder="e.g 123" >
+            <input name="cardmonth" maxlength="2" id="cardmonthinput" placeholder="MM" >
+            <input name="cardyear" maxlength="2" id="cardyearinput" placeholder="YY" >
+            <input type="number" name="cardcvc" maxlength="3" id="cardcvcinput" placeholder="e.g 123" >
           </div>
           <span class="error">Can't be blank</span>
         </div>
@@ -71,7 +72,7 @@
       <img src="images/icon-complete.svg" alt="">
       <h2>THANK YOU!</h2>
       <h5>We've added your card details</h5>
-      <button>Continue</button>
+      <button id="continueButton">Continue</button>
 
 
     </div>
