@@ -71,7 +71,7 @@ function submitForm (e) {
     span.style.opacity = "0";
   }
 
-  if (!inputNumber.value ) {
+  if (!inputNumber.value || isNaN(inputNumber.value) ) {
     hasError = true
     inputNumber.classList.add('inputError')
     let span = inputNumber.nextSibling.nextSibling
@@ -98,7 +98,7 @@ function submitForm (e) {
     inputYear.classList.remove('inputError')
   }
 
-  if (!inputCvc.value) {
+  if (!inputCvc.value || isNaN(inputCvc.value)) {
     hasError = true
     inputCvc.classList.add('inputError')
     
